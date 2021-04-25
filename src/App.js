@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+
 function Square(props) {
     return (
         <button className="square" onClick={props.onClick}>
@@ -77,8 +78,8 @@ class Game extends React.Component {
     }
     
     reset() {
-        this.state.history = [{squares: Array(9).fill(null)}];
-        window.location.reload(); 
+       // this.state.history = [{squares: Array(9).fill(null)}];
+       window.location.reload(); 
       /*  this.setState({
             history: history[{squares: Array(9).fill(null)}],
             xIsNext: true,
@@ -96,7 +97,7 @@ class Game extends React.Component {
             'Go to Start';
             return (
                 <li key={move}>
-                    <button onclick={() => this.jumpTo(move)}>{desc}</button>
+                    <button onClick={() => this.jumpTo(move)}>{desc}</button>
                 </li>
             );
         });
@@ -107,6 +108,7 @@ class Game extends React.Component {
             status = 'Next Player: ' + (this.state.xIsNext ? 'X' : 'O');
         }
         return(
+
             <div className="game">
                 <div className="game-board">
                     <Board 
@@ -119,7 +121,7 @@ class Game extends React.Component {
                     <ol>{moves}</ol>
                 </div>
                 <div>
-                    <button onclick={()=>this.reset()}>Reset</button>
+                    <button onClick={()=>this.reset()}>Reset</button>
                 </div>
             </div>
         );

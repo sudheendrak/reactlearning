@@ -2,9 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Game from './App.js';
-
-const myelement = (
-    <h1>Tic tac toe</h1>
-);
+import Timetic from './timetic';
 
 ReactDOM.render(<Game />, document.getElementById('root'));
+
+const tick = () => {
+    return(ReactDOM.render(<div className="clock">
+                    <Timetic date={new Date()}/>
+                </div>,document.getElementById("clock")));
+} 
+setInterval(tick,1000);

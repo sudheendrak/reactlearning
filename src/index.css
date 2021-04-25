@@ -49,3 +49,10 @@ ol, ul {
 .game-info {
   margin-left: 20px;
 }
+
+.clock {
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  color:rgba(102, 94, 19, 0.7);
+}
